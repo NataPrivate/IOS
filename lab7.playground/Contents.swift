@@ -11,7 +11,7 @@ func checkIsAlphabetic(_ symbol : Character) -> Bool {
 	return symbol.isLetter // swift 5
 }
 
-let testString = readLine()
+let testString = readLine()!
 var notAlphabeticCount = 0
 for symbol in testString {
 	if !checkIsAlphabetic(symbol) {
