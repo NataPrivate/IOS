@@ -31,8 +31,8 @@ handle(wallet: wallet, closure: {$0==100})
 
 
 // приклад з сортуванням масиву
-var array = [1,44,81,4,277,50,101,51,8]
-var sortedArray = array.sorted(by: {$0<$1})
+var array1 = [1,44,81,4,277,50,101,51,8]
+var sortedArray = array1.sorted(by: {$0<$1})
 
 
 // карування
@@ -47,14 +47,14 @@ closure(19) // поверне 20
 
 // автозамикання, ледачі обчислення
 var arrayOfNames = ["Helga", "Bazil", "Alex"]
-func printName(nextName: ()->String) {
+func printName(_ nextName: ()->String) {
 	// який-небудь код
 	print(nextName())
 }
 printName({arrayOfNames.remove(at: 0)})
 
-var arrayOfNames = ["Helga", "Bazil", "Alex"]
-func printName2(nextName: @autoclosure ()->String) {
+arrayOfNames = ["Helga", "Bazil", "Alex"]
+func printName2(_ nextName: @autoclosure ()->String) {
 	// який-небудь код
 	print(nextName())
 }
@@ -63,21 +63,17 @@ printName2(arrayOfNames.remove(at: 0))
 
 
 // lab 9
-var array = [ 2, 4, 5, 7]
-var newArray = array.map{$0*$0}
-newArray // [4, 16, 25, 49]
+var array2 = [ 2, 4, 5, 7]
+print("\(array2.map{$0*$0})")
 
 var intArray = [1, 2, 3, 4]
-var boolArray = array.map{$0 > 2}
-boolArray // [false, false, true, true]
+print("\(array2.map{$0 > 2})")
 
 let someArray = [[1, 2, 3, 4, 5], [11, 44, 1, 6], [16, 403, 321, 10]]
-let filterSomeArray = someArray.compactMap{$0.filter{ $0 % 2 == 0}}
-filterSomeArray // [2, 4, 44, 6, 16, 10]
+print("\(someArray.flatMap{$0.filter{ $0 % 2 == 0}})")
 
-let milesToDest = ["Moscow":120.0, "Dubai":50.0, "Paris":70.0]
-var kmToDest = milesToDest.map {name, miles in [name:miles * 1.6093]}
-kmToDest // [["Dubai": 80.465], ["Paris": 112.651], ["Moscow": 193.116]]
+let milesToKm = ["Moscow":120.0, "Dubai":50.0, "Paris":70.0]
+print("\(milesToKm.map {name, miles in [name:miles * 1.6093]})")
 
 
 let cash = [10, 50, 100, 500]
