@@ -572,10 +572,8 @@ func AllClients() throws {
                 return
                 
             }
-        }
-        
+        }        
     }
-    print("ERROR")
 }
 func AgrByClientId() throws {
     print("enter id")
@@ -585,10 +583,8 @@ func AgrByClientId() throws {
             if i>0{
                 try printAgreements(i)
             }
-        }
-        
+        }        
     }
-    print("ERROR")
 }
 
 func SrvByAgrId() throws {
@@ -601,10 +597,8 @@ func SrvByAgrId() throws {
                 return
                 
             }
-        }
-        
+        }        
     }
-    print("ERROR")
 }
 
 func AddAgr() throws {
@@ -634,13 +628,11 @@ func AddAgr() throws {
                         }
                         print("READY")
                         return
-                    }
-                    
+                    }                    
                 }
             }
         }
     }
-    print("ERROR")
 }
 
 initEntities()
