@@ -1,2 +1,2 @@
 # IOS
-Labs for 'Projects for mobile devices'
+Labs and exam for 'Projects for mobile devices'
